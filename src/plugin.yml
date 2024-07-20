@@ -1,0 +1,39 @@
+name: PlayerSite
+version: 1.0.2-1.20.2
+author: Knowscratcher
+main: com.ks.ps.Player_site
+api-version: 1.14
+commands:
+  playersiteadd:
+    description: 新增tp點
+    usage: /playersiteadd <名字>
+    aliases:
+      - psadd
+      - psa
+  playersitetp:
+    description: tp到地點
+    usage: /playersitetp <名字>
+    aliases:
+      - pstp
+      - pst
+  playersitelist:
+    description: 列出所有tp點
+    usage: /playersitelist
+    aliases:
+      - pslist
+      - psl
+  playersitesearch:
+    description: 查看tp點屬性
+    usage: /playersitelist <名字>
+    aliases:
+      - pssearch
+      - pss
+  playersiteremove:
+    description: 刪除tp點
+    usage: /playersiteremove <名字>
+    aliases:
+      - playersitedelete
+      - psremove
+      - psr
+      - psdelete
+      - psd
