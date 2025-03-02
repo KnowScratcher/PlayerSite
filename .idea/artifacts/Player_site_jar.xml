@@ -4,6 +4,7 @@
     <root id="archive" name="Player_site.jar">
       <element id="module-output" name="Player_site" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../Spigot_API/spigot-api-1.20-2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Spigot_API/dynmap-api-3.7-beta-4.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

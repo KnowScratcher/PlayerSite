@@ -1,6 +1,7 @@
 package com.ks.ps.commands;
 
 import com.ks.ps.Player_site;
+import com.ks.ps.api.DynmapControl;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -24,7 +25,7 @@ public class AddPoint implements CommandExecutor {
         if (sender instanceof Player player) {
             if (args.length == 1) {
                 String[] locations = PointControl.points;
-                System.out.println(Arrays.toString(locations));
+//                System.out.println(Arrays.toString(locations));
                 if (!Arrays.asList(locations).contains(args[0]) && args[0] != "points") {
                     Location location = player.getLocation();
                     locations = Arrays.copyOf(locations,locations.length+1);
@@ -36,6 +37,7 @@ public class AddPoint implements CommandExecutor {
                     PointControl.config.set(args[0],location);
                     PointControl.points = locations;
                     plugin.saveConfig();
+                    DynmapControl.add(location,args[0]);
                     player.sendMessage(ChatColor.GREEN+"已成功新增"+ChatColor.YELLOW+args[0]);
                 }else {
                     player.sendMessage(ChatColor.YELLOW+args[0]+ChatColor.RED+"已經存在");

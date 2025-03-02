@@ -1,6 +1,7 @@
 package com.ks.ps.commands;
 
 import com.ks.ps.Player_site;
+import com.ks.ps.api.DynmapControl;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -34,6 +35,7 @@ public class Remove implements CommandExecutor {
                 PointControl.config.set(args[0],null);
                 PointControl.points = new_locations;
                 plugin.saveConfig();
+                DynmapControl.remove(args[0]);
                 sender.sendMessage(ChatColor.GREEN+"已成功移除"+ChatColor.YELLOW+args[0]);
 
             }else {

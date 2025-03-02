@@ -3,6 +3,7 @@ version: 1.0.2-1.20.2
 author: Knowscratcher
 main: com.ks.ps.Player_site
 api-version: 1.14
+softdepend: [dynmap]
 commands:
   playersiteadd:
     description: 新增tp點
